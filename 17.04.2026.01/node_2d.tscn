@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://tmfckbvitfiu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
+
+[node name="Node2D" type="Node2D" unique_id=680051799]
+position = Vector2(1, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097947278]
+shape = SubResource("RectangleShape2D_y32ns")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1510417419]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=536396394]
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=759890614]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cyq8vlni33o7n"]
+
+[ext_resource type="Script" uid="uid://cajyk1qsfxogu" path="res://tiro.gd" id="1_rivwi"]
+[ext_resource type="Texture2D" uid="uid://dxpqoa4v7fwnl" path="res://objetos/Sprite Pack 4/1 - Agent_Mike_Bullet (16 x 16).png" id="2_gp2hl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hmjle"]
+radius = 40.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wib4g"]
+atlas = ExtResource("2_gp2hl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4dry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wib4g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1941468090]
+script = ExtResource("1_rivwi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1791529803]
+shape = SubResource("CircleShape2D_hmjle")
+
+[node name="Timer" type="Timer" parent="." unique_id=404558452]
+wait_time = 3.0
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=565818339]
+position = Vector2(8, 0)
+scale = Vector2(7.25, 6)
+sprite_frames = SubResource("SpriteFrames_a4dry")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

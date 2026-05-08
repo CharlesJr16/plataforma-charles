@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dhf8u8q1xra6"]
+
+[ext_resource type="Script" uid="uid://dk3c233eajen4" path="res://slime.gd" id="1_4l1t8"]
+[ext_resource type="Texture2D" uid="uid://b1ei4qter6xuj" path="res://objetos/Enemy (Slime)/sEnemy_Jumping.png" id="2_ppcr1"]
+[ext_resource type="Texture2D" uid="uid://dusibwpq2u" path="res://objetos/Enemy (Slime)/sEnemy_Killed.png" id="3_jayke"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2002g"]
+atlas = ExtResource("2_ppcr1")
+region = Rect2(0, 0, 17, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bratd"]
+atlas = ExtResource("2_ppcr1")
+region = Rect2(17, 0, 17, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b0gg"]
+atlas = ExtResource("2_ppcr1")
+region = Rect2(34, 0, 17, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_da4t2"]
+atlas = ExtResource("2_ppcr1")
+region = Rect2(51, 0, 17, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrxk1"]
+atlas = ExtResource("3_jayke")
+region = Rect2(0, 0, 17, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alucd"]
+atlas = ExtResource("3_jayke")
+region = Rect2(17, 0, 17, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8w6w5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2002g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bratd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b0gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_da4t2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrxk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alucd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lrvan"]
+radius = 98.95454
+
+[node name="slime" type="CharacterBody2D" unique_id=1197830864]
+script = ExtResource("1_4l1t8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=608441555]
+position = Vector2(-1.9073486e-06, 1.9073486e-06)
+scale = Vector2(9.911765, 11.357142)
+sprite_frames = SubResource("SpriteFrames_8w6w5")
+frame_progress = 0.28388166
+
+[node name="jump Timer" type="Timer" parent="AnimatedSprite2D" unique_id=798039479]
+wait_time = 2.0
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=642134167]
+shape = SubResource("CircleShape2D_lrvan")

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dvsmg862c7h0c"]
+
+[ext_resource type="Texture2D" uid="uid://c88uw2bpedqmk" path="res://objetos/World Objects/sBlock.png" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bg0f5fuftx2cn" path="res://objetos/World Objects/sTrampoline_Movement.png" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://cyuun2crf8iin" path="res://objetos/World Objects/sSpikeTrap.png" id="3_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://cvq7ecx6r7q0j" path="res://objetos/World Objects/sSign.png" id="4_dw050"]
+[ext_resource type="Texture2D" uid="uid://cw0rvbm75wukg" path="res://objetos/World Objects/sWoodBox.png" id="5_b26j0"]
+
+[sub_resource type="TileSet" id="TileSet_n7ghd"]
+
+[node name="player" type="Node2D" unique_id=226513962]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=426582001]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D" unique_id=10888716]
+tile_set = SubResource("TileSet_n7ghd")
+
+[node name="SBlock" type="Sprite2D" parent="." unique_id=2130269834]
+position = Vector2(182, 51.99991)
+scale = Vector2(1.2968737, 1.5937487)
+texture = ExtResource("1_sweqy")
+
+[node name="STrampolineMovement" type="Sprite2D" parent="." unique_id=1485169525]
+position = Vector2(74, 50)
+texture = ExtResource("2_2hs0m")
+
+[node name="SSpikeTrap" type="Sprite2D" parent="." unique_id=1818796628]
+position = Vector2(271, 47)
+scale = Vector2(1.03125, 1.8125)
+texture = ExtResource("3_1jxqw")
+
+[node name="SSign" type="Sprite2D" parent="." unique_id=178121857]
+position = Vector2(396, 54)
+scale = Vector2(1.0267856, 2.062501)
+texture = ExtResource("4_dw050")
+
+[node name="SWoodBox" type="Sprite2D" parent="." unique_id=101040591]
+position = Vector2(34.999996, 593)
+scale = Vector2(4.312497, 4.281249)
+texture = ExtResource("5_b26j0")
+
+[node name="SWoodBox" type="Sprite2D" parent="SWoodBox" unique_id=18758853]
+visible = false
+position = Vector2(38.50006, 574.75)
+scale = Vector2(4.312497, 4.281249)
+texture = ExtResource("5_b26j0")
+
+[node name="SWoodBox2" type="Sprite2D" parent="SWoodBox" unique_id=1987771712]
+visible = false
+position = Vector2(38.50006, 574.75)
+scale = Vector2(4.312497, 4.281249)
+texture = ExtResource("5_b26j0")
+
+[node name="SWoodBox" type="Sprite2D" parent="SWoodBox/SWoodBox2" unique_id=1534303159]
+visible = false
+position = Vector2(38.50006, 574.75)
+scale = Vector2(4.312497, 4.281249)
+texture = ExtResource("5_b26j0")

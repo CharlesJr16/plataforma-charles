@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cay61qhu5t7h1"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=194514263]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=2021482592]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=567192555]
